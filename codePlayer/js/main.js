@@ -4,3 +4,9 @@ function updateOutput(){
 
     document.getElementById("outputDisplay").contentWindow.eval($("#jsDisplay").val());
 };
+
+$(document).ready(function() {
+    setInterval(function(){
+        $( "#subtitle" ).effect( "fade", "linear", "slow" );
+}, 1000);
+});
