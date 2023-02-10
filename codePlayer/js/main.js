@@ -10,3 +10,7 @@ $(document).ready(function() {
         $( "#subtitle" ).effect( "fade", "linear", "slow" );
 }, 1000);
 });
+
+$(".button").hover(function(){
+    $(this).toggleClass("highlightedButton");
+});
