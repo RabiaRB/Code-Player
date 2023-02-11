@@ -14,3 +14,13 @@ $(document).ready(function() {
 $(".button").hover(function(){
     $(this).toggleClass("highlightedButton");
 });
+
+$(".button").click(function(){
+    $(this).toggleClass("selectedButton");
+    var buttonId = $(this).attr("id");
+    var displayId = buttonId.replace("Button", "Display");
+    $("#" + displayId).toggleClass("hidden");
+    var activeDisplay = 4 - $('.hidden').length;
+    $(".displayPanel").width(($(window).width() / activeDisplay) - 8);
+    
+})
