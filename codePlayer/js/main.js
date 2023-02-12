@@ -24,3 +24,13 @@ $(".button").click(function(){
     $(".displayPanel").width(($(window).width() / activeDisplay) - 8);
     
 })
+
+$(".displayPanel").height($(window). height() - $(".header").height());
+$(".displayPanel").width(($(window). width() / 2) - 6);
+            
+updateOutput();
+       
+$("textarea").on('change keyup paste', function(){
+
+    updateOutput();
+}) 
