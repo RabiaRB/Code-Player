@@ -24,12 +24,17 @@ $(".button").click(function(){
     $(".displayPanel").width(($(window).width() / activeDisplay) - 8);
     
 })
+function adjustPlanel() {
+    $(".displayPanel").height($(window).height() - $(".header").height() - $("footer").height());
+    $(".displayPanel").width(($(window).width() / 2) - 6);
+}
 
-$(".displayPanel").height($(window). height() - $(".header").height());
-$(".displayPanel").width(($(window). width() / 2) - 6);
-            
+adjustPlanel();
 updateOutput();
-       
+$(window).resize(function(){
+
+    adjustPlanel();
+}) 
 $("textarea").on('change keyup paste', function(){
 
     updateOutput();

@@ -118,5 +118,14 @@ footer {
      padding: 10px;
      font-size: 10px;
      text-align: center;
+}
 
+.social-media a{
+     text-decoration: none;
+}
+
+.fab{
+     color: white;
+     padding: 5px;
+     cursor: pointer;
 }
