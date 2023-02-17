@@ -5,10 +5,17 @@ function updateOutput(){
     document.getElementById("outputDisplay").contentWindow.eval($("#jsDisplay").val());
 };
 
+function adjustPlanel() {
+    $(".displayPanel").height($(window).height() - $(".header").height() - $("footer").height());
+    $(".displayPanel").width(($(window).width() / 2) - 6);
+};
+
 $(document).ready(function() {
     setInterval(function(){
-        $( "#subtitle" ).effect( "fade", "linear", "slow" );
-}, 1000);
+        $("#subtitle" ).fadeOut("slow", function() {
+            $(this).fadeIn("slow");
+        });
+    }, 1000);
 });
 
 $(".button").hover(function(){
@@ -24,10 +31,6 @@ $(".button").click(function(){
     $(".displayPanel").width(($(window).width() / activeDisplay) - 8);
     
 })
-function adjustPlanel() {
-    $(".displayPanel").height($(window).height() - $(".header").height() - $("footer").height());
-    $(".displayPanel").width(($(window).width() / 2) - 6);
-}
 
 adjustPlanel();
 updateOutput();
