@@ -2,7 +2,7 @@
 
 CodePlayer is a web-based code editor that provides display panels for HTML, CSS, JavaScript, and live output. It uses jQuery to enhance the user experience and allows you to see the live response of your code.
 
-**Link to project:** [Generate Hex Colors](https://see-me-live.netlify.app/)
+**Link to project:** [Code-Player](https://see-me-live.netlify.app/)
 
 ## View
 <img src="./see-me-live.netlify.app_.png" width="300px">
